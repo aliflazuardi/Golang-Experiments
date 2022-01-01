@@ -25,6 +25,19 @@ func main() {
 
 	// Delete key-value pair from map
 	delete(m, "erlang")
-	fmt.Printf("Map after delete: %v", m)
+	fmt.Printf("Map after delete: %v\n", m)
+
+	// Check if key is present
+	_, prs := m["erlang"]
+	fmt.Printf("is Present? %v\n", prs)
+
+	// Delcare and initialize map in one line
+	n := map[string]int{"foo": 1, "bar": 2}
+	fmt.Println(n)
+
+	// Iterate through map
+	for k, v := range n {
+		fmt.Printf("%s: %v\n", k, v)
+	}
 
 }
